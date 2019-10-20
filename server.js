@@ -1,4 +1,4 @@
-var env = require("dotenv");
+var env = require("dotenv").config();
 var express = require("express");
 var logger = require("morgan");
 var mongoose = require("mongoose");
