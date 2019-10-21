@@ -15,8 +15,8 @@ app.use(express.json());
 app.use(express.static("public"));
 
 var MONGODB;
-if (process.env.MONGODB) {
-  MONGODB = process.env.MONGODB;
+if (process.env.MONGODB_URI) {
+  MONGODB = process.env.MONGODB_URI;
 } else {
   MONGODB = "mongodb://localhost/mongoHeadlines";
 }
