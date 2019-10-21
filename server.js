@@ -14,9 +14,14 @@ app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 app.use(express.static("public"));
 
-var MONGODB = process.env.MONGODB || "mongodb://localhost/mongoHeadlines";
-mongoose.connect(MONGODB, {useNewUrlParser: true});
+var MONGODB;
+if (process.env.MONGODB) {
+  MONGODB = process.env.MONGODB;
+} else {
+  MONGODB = "mongodb://localhost/mongoHeadlines";
+}
 
+mongoose.connect(MONGODB, {useNewUrlParser: true});
 
 app.get("/scrape", function(req, res) {
   axios.get("http://www.echojs.com/").then(function(response) {
