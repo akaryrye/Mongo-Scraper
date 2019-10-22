@@ -10,19 +10,22 @@
 <body>
 
   <div id="nav">
-    <h1>Mongo Scraper</h1> 
-    <a href="/articles">articles</a>
-    <a href="/scrape">scrape</a>
+    <h1 id="nav-title">Mongo Scraper</h1> 
+    <div id="nav-links">
+      <a href="/articles">articles</a>
+      <a href="/scrape">scrape</a>
+    </div>
   </div>
 
   <div id="article-container">
-    <h2><i>Scraped Articles</i></h2>
-    <div id="articles"></div>
+    <h2 id="articles-header"><i>Scraped Articles</i></h2>
+    <div id="articles-output"></div>
   </div>
 
   <div id="comment-container">
-    <h2>__Comments__</h2>
-    <div id="input-comment"></div>
+    <h2>Leave a Comment</h2>
+    <div id="input-comment"></div><br>
+    <h2>Comments</h2>
     <div id="article-comments"></div>
   </div>
 

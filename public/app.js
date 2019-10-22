@@ -1,19 +1,20 @@
 // Format and display each article
 function displayArticle(article) {
-    $("#articles").append(
+    $("#articles-output").append(
       `<div class="article">
         <p class="article-title" data-id="${article._id}">${article.title}</p>
         <button class="article-link"><a href="${article.link}" target="_blank">Read Full Article</a></button>
         <button class="input-comment" data-id="${article._id}">Leave Comment</button>
-      </div>`)
-      $("#articles").append(`<p>____________________</p>`);;
+      </div>`);
 }
 
 // Format and display each comment
 function displayComment(comment) {
-  $("#article-comments").append(`<p>____________________</p>`);
-  $("#article-comments").append(`<h5>____${comment.title}____</h5>`);
-  $("#article-comments").append(`<p>${comment.body}</p>`);
+  $("#article-comments").append(
+    `<div class='comment'>
+      <h3>${comment.title}</h3>
+      <p>${comment.body}</p>
+    </div>`);
 }
 
 // Format and display comment input form
